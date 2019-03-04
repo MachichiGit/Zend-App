@@ -1,0 +1,35 @@
+
+<div class="jumbotron">
+    <h1>API <span class="zf-green">TWITTER</span></h1>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">URLs</h3>
+            </div>
+            <div class="panel-body">
+               <p>
+                    <?php
+                        $form = $this->form;
+                        $form->setAttribute('action','/urls/save');
+
+                        $form->prepare();  
+                        
+                        echo $this->form()->openTag($form);
+                        foreach ($form as $key => $value) {
+                            if ($key!='security') {
+                                echo '  <div class="form-group">';
+                                    echo  $this->formRow($form->get($key));
+                                echo '</div>';
+                            }
+                        }
+                        echo $this->form()->closeTag();
+                    ?>
+                </p>
+                <p><a class="btn btn-success pull-right" href="/urls" > URLs &raquo;</a></p>
+            </div>
+        </div>
+    </div>
+</div>

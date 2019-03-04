@@ -1,0 +1,24 @@
+
+<div class="jumbotron">
+    <h1>API <span class="zf-green">TWITTER</span></h1>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Twitter Search API</h3>
+            </div>
+            <div class="panel-body">
+                <p>
+                    <?php
+                        foreach ($this->ids['ids'] as $value) {
+                            echo '<span class="badge badge-success" style="margin-right: 10px;margin-bottom: 10px; display: inline-flex;">'.$value.'</span>';
+                        }
+                    ?>
+                </p>
+                <p><a class="btn btn-success pull-right"  href="/api"> Api &raquo;</a></p>
+            </div>
+        </div>
+    </div>
+</div>
